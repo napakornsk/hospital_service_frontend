@@ -10,7 +10,8 @@ import type {
   PatientResponse,
 } from "./types";
 
-const API = "/api/v1";
+const API_BASE = import.meta.env.VITE_API_URL || "";
+const API = `${API_BASE}/api/v1`;
 
 interface DummyPatient {
   hospital_id: string;
